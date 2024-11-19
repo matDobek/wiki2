@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "old -- fixme/GoLang.md",
+                "file": "Javascript/ThreeJS/01. Geometry/Geometry.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GoLang"
+              "title": "Geometry"
             }
           }
         ],
@@ -207,6 +207,9 @@
   },
   "active": "b7cb7b1844866ef7",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Javascript/ThreeJS/01. Geometry/Geometry.md",
+    "old -- fixme/GoLang.md",
     "old -- fixme/Golang/Types.md",
     "old -- fixme/Golang/Interfaces.md",
     "old -- fixme/Golang/Generics.md",
@@ -220,7 +223,6 @@
     "Javascript/ThreeJS/Textures.md",
     "Javascript/ThreeJS/Issues.md",
     "Javascript/ThreeJS/02. Light && Shadow.md",
-    "Javascript/ThreeJS/01. Geometry/Geometry.md",
     "Javascript/ThreeJS/00. Setup/Debug.md",
     "Javascript/ThreeJS/00. Setup/Basic.md",
     "Javascript/ThreeJS/00. Setup/Base.md",
@@ -237,7 +239,6 @@
     "Javascript/ThreeJS/01. Geometry/_assets",
     "Javascript/ThreeJS/01. Geometry",
     "Javascript/ThreeJS/00. Setup",
-    "old -- fixme/GoLang.md",
     "old -- fixme",
     "Javascript/_assets",
     "Inbox.md",

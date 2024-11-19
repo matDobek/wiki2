@@ -8,13 +8,6 @@
 ![[Pasted image 20241118134822.png]]
 
 In `ThreeJS` faces are usually triangles.
-### What is `normal vector`?
-Defines which direction `face` is pointing to.
-`normal vector` is perpendicular to the surface.
-
-![[Pasted image 20241118140023.png]]
-> A normal to a surface at a point is the same as a normal to the tangent plane to the surface at the same point.
-
 
 ### What is `uv mapping`?
 
@@ -45,10 +38,12 @@ In `ThreeJS`:
 ```js
 // https://threejs.org/docs/index.html?q=geom#api/en/core/BufferGeometry.boundingBox
 
+BufferGeometry.computeBoundingBox()
 BufferGeometry.boundingBox
 
 // Bounding box for the bufferGeometry, which can be calculated with .computeBoundingBox(). Default is `null`.
 
+BufferGeometry.computeBoundingSphere()
 BufferGeometry.boundingSphere
 
 // Bounding sphere for the bufferGeometry, which can be calculated with .computeBoundingSphere(). Default is null.
@@ -80,7 +75,20 @@ boundingSphere.position.add(box.geometry.boundingSphere.center)
 scene.add(boundingSphere)
 ```
 
-### What is `normal`?
+### What is `normal vector`?
+
+Defines which direction `face` is pointing to.
+`normal vector` is perpendicular to the surface.
+
+![[Pasted image 20241118140023.png]]
+> A normal to a surface at a point is the same as a normal to the tangent plane to the surface at the same point.
+
+`normals` are use to compute lighting effects.
+For example:
+* compute the angle between face surface and the light source
+	* bright light when facing directly the light
+	* dimmer if under angle
+
 ### How to construct custom shape?
 
 ```js
@@ -119,8 +127,8 @@ geometry.setIndex(indices)
 geometry.computeVertexNormals() // compute normals for lighting
 ```
 
-- [ ] Why can't we use `Float32Array` for indices?
-HERE!
+* `BufferAttribute` as second argument takes number of elements that should be associated with single `vertex`
+* Notice that there are different `type` requirements for `vertices` and `indices`.
 
 - [*] Why lighting does not interact with my shape?
 
@@ -159,3 +167,24 @@ const indices = new [
 
 ![[Pasted image 20241118195304.png]]
 
+
+### Mesh vs Geometry
+
+```js
+object3d
+
+mesh.position
+mesh.rotation
+mesh.scale
+mesh.lookAt
+mesh.visible
+mesh.receiveShadow
+mesh.castShadow
+
+geometry.translate
+geometry.lookAt / rotateX / Y / Z
+geometry.scale
+geometry.boundingBox
+geometry.boundingSphere
+geometry.center
+```
